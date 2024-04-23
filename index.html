@@ -393,10 +393,10 @@
             var videoSrc = this.getAttribute('data-src');
             
             // Construct the URL to the video file in the "videos" folder
-            var videoURL = 'videos/' + videoSrc;
+            var videoURL = '/ReactNativePortfolio/videos/' + videoSrc;
 
             // Redirect to another page with the video player, passing the filename as a query parameter
-            window.location.href = 'projects.html?src=' + encodeURIComponent(videoURL);
+            window.location.href = '/ReactNativePortfolio/projects.html?src=' + encodeURIComponent(videoURL);
         });
     });
 </script>
