@@ -42,12 +42,15 @@
     </div>
 
     <script>
-        // Retrieve the video source from the URL query parameter
-        var params = new URLSearchParams(window.location.search);
-        var videoSrc = params.get('src');
+        // Check if the hostname matches the GitHub Pages domain
+        if (window.location.hostname === 'ReactNativePortfolio.github.io') {
+            // Retrieve the video source from the URL query parameter
+            var params = new URLSearchParams(window.location.search);
+            var videoSrc = params.get('src');
 
-        // Set the video source using a relative path
-        document.getElementById('video-source').src = videoSrc;
+            // Set the video source using a relative path
+            document.getElementById('video-source').src = videoSrc;
+        }
     </script>
 </body>
 </html>
