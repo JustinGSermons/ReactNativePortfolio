@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin's Digital Canvas</title>
+    <title>Project Video</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
+
+    <style>
+        /* Custom styles for the video container */
+        .navbar {
+            z-index: 1000; /* Ensure navbar stays on top */
+        }
+
+        .video-container {
+            position: fixed;
+            top: 56px; /* Adjust top value according to your navbar height */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 56px); /* Subtract navbar height from viewport height */
+            overflow: hidden;
+            background-color: black; /* Set background color to black */
+        }
+
+        /* Set video width and height to cover the container */
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -34,23 +58,20 @@
     </div>
 
     <div class="video-container">
-        <video controls autoplay>
-            <!-- Initially, set a placeholder for the video source -->
-            <source id="video-source" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <script>
-        // Check if the hostname matches the GitHub Pages domain
-        if (window.location.hostname === 'justingsermons.github.io') {
-            // Retrieve the video source from the URL query parameter
-            var params = new URLSearchParams(window.location.search);
-            var videoSrc = params.get('src');
-
-            // Set the video source using a relative path
-            document.getElementById('video-source').src = videoSrc;
-        }
-    </script>
+      <video controls autoplay>
+          <!-- Initially, set a placeholder for the video source -->
+          <source id="video-source" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+  
+  <script>
+      // Retrieve the video source from the URL query parameter
+      var params = new URLSearchParams(window.location.search);
+      var videoSrc = params.get('src');
+  
+      // Set the video source
+      document.getElementById('video-source').src = decodeURIComponent(videoSrc);
+  </script>
 </body>
 </html>
