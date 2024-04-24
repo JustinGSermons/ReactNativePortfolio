@@ -60,13 +60,22 @@
             background-color: #707793; /* Light grey background */
             padding: 4rem 0; /* Add padding top and bottom */
         }
+        .custom-btn {
+        background-color: #707793;
+        border-color: #707793;
+    }
+
+    .custom-btn:hover {
+        background-color: #5a5e71;
+        border-color: #5a5e71;
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -427,11 +436,12 @@
 
   <footer class="text-body-secondary py-5">
     <div class="container">
-      <p class="float-end mb-1">
-        <a href="#">Back to top</a>
-      </p>
+        <button class="btn custom-btn float-end mb-1">
+          <a href="#" class="text-white">Back to top</a>
+        </button>
     </div>
-  </footer>
+</footer>
+
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- JavaScript to handle the click event on the "View" button -->
