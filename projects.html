@@ -57,12 +57,20 @@
           </nav>
     </div>
 
-    <div class="video-container">
+    <div>
       <video controls autoplay>
-          <!-- Set relative path for the video source -->
-          <source src="videos/project-video.mp4" type="video/mp4">
+          <source id="video-source" src="/ReactNativePortfolio/videos" type="video/mp4">
           Your browser does not support the video tag.
       </video>
   </div>
+  
+  <script>
+      // Retrieve the video source from the URL query parameter
+      var params = new URLSearchParams(window.location.search);
+      var videoSrc = params.get('src');
+  
+      // Set the video source
+      document.getElementById('video-source').src = decodeURIComponent(videoSrc);
+  </script>
 </body>
 </html>
