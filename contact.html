@@ -10,39 +10,83 @@
     rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
+
+    <style>
+      /* Custom CSS */
+      body {
+          background-color: #2e3047; /* Light grey background */
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .navbar {
+          background-color: #212529; /* Dark background */
+          border: 4px solid #3c3f58;
+      }
+      .navbar-brand,
+      .navbar-nav .nav-link {
+          color: #ffffff !important; /* White text */
+      }
+      .navbar-brand:hover,
+      .navbar-nav .nav-link:hover {
+          color: #adb5bd !important; /* Light grey text on hover */
+      }
+      .card {
+          background-color: #ffffff; /* White card background */
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+          margin-top: 20px; /* Add margin for spacing */
+      }
+      .card-header {
+          background-color: #212529; /* Dark header background */
+          color: #ffffff; /* White text */
+          border-radius: 15px 15px 0 0; /* Rounded corners on top */
+      }
+      .card-body {
+          padding: 20px;
+      }
+  </style>
+
 </head>
 <body>
 
-    <!-- Your content goes here -->
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/ReactNativePortfolio/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/ReactNativePortfolio/contact.html">Contact <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/ReactNativePortfolio/about.html">About Me</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="card">
-        <div class="card-header">
-          Contact Justin
-        </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>Email: ju744812@ucf.edu</p>
-          </blockquote>
-        </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+          <a class="navbar-brand" href="/ReactNativePortfolio/index.html">Justin's Digital Canvas</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/ReactNativePortfolio/index.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/ReactNativePortfolio/contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/ReactNativePortfolio/about.html">About Me</a>
+                  </li>
+              </ul>
+          </div>
       </div>
+  </nav>
+
+    <!-- Contact Section -->
+    <div class="container">
+      <div class="card">
+          <div class="card-header">
+              Contact Justin
+          </div>
+          <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                  <p>Email: ju744812@ucf.edu</p>
+              </blockquote>
+          </div>
+      </div>
+  </div>
+
 </body>
 </html>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.

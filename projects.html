@@ -12,34 +12,51 @@
     crossorigin="anonymous">
 
     <style>
-        /* Custom styles for the video container */
-        .navbar {
-            z-index: 1000; /* Ensure navbar stays on top */
-        }
+      /* Custom styles for the video container */
+      .navbar {
+          z-index: 1000; /* Ensure navbar stays on top */
+          background-color: #212529; /* Dark background */
+          border: 4px solid #3c3f58;
+      }
+      .navbar-brand,
+      .navbar-nav .nav-link {
+          color: #ffffff !important; /* White text */
+      }
+      .navbar-brand:hover,
+      .navbar-nav .nav-link:hover {
+          color: #adb5bd !important; /* Light grey text on hover */
+      }
 
-        .video-container {
-            position: fixed;
-            top: 56px; /* Adjust top value according to your navbar height */
-            left: 0;
-            width: 100%;
-            height: calc(100% - 56px); /* Subtract navbar height from viewport height */
-            overflow: hidden;
-            background-color: black; /* Set background color to black */
-        }
+      .video-container {
+          position: fixed;
+          top: 56px; /* Adjust top value according to your navbar height */
+          left: 0;
+          width: 100%;
+          height: calc(100% - 56px); /* Subtract navbar height from viewport height */
+          overflow: hidden;
+          background-color: black; /* Set background color to black */
+      }
 
-        /* Set video width and height to cover the container */
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+      /* Set video width and height to cover the container */
+      video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      /* Custom CSS */
+      body {
+          background-color: #2e3047; /* Light grey background */
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+  </style>
+
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/ReactNativePortfolio/index.html">Justin's Digital Canvas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
@@ -59,7 +76,6 @@
 
     <div class="video-container">
       <video id="video-source" controls autoplay>
-          <!-- Initially, set a placeholder for the video source -->
           <source type="video/mp4">
           Your browser does not support the video tag.
       </video>
