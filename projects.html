@@ -58,9 +58,9 @@
     </div>
 
     <div class="video-container">
-      <video controls autoplay>
+      <video id="video-source" controls autoplay>
           <!-- Initially, set a placeholder for the video source -->
-          <source id="video-source" type="video/mp4">
+          <source type="video/mp4">
           Your browser does not support the video tag.
       </video>
   </div>
@@ -72,6 +72,9 @@
   
       // Set the video source
       document.getElementById('video-source').src = decodeURIComponent(videoSrc);
+      
+      // Load the video
+      document.getElementById('video-source').load();
   </script>
 </body>
 </html>
